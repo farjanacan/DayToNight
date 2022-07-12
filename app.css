@@ -2,8 +2,11 @@
     --white: whitesmoke;
     --black: #000000;
   }
+  * {
+    box-sizing: border-box;
+  }
 body{
-    background: var(--bg);
+    /* background: var(--bg); */
     color: var(--fontColor);
     font-family: helvetica;
     text-align: center;
@@ -24,9 +27,8 @@ body{
     background: url('https://images.unsplash.com/photo-1509773896068-7fd415d91e2e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80') no-repeat center center fixed;
     background-size: cover;
     --fontColor: rgba(236, 235, 235, 0.703);
-    transition:all 2s ease;
+    transition:all 1s ease;
 }
-
 
 button {
     background-image: linear-gradient(92.88deg, #4157a0 9.16%,  #4f3b70 64.72%) ;
@@ -46,3 +48,6 @@ button:hover {
     transition-duration: .3s;
 }
 
+label {
+    font-size: 2rem;
+}
