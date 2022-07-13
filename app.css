@@ -2,34 +2,41 @@
     --white: whitesmoke;
     --black: #000000;
   }
-  * {
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
   }
-body{
-    /* background: var(--bg); */
+  body{
+    margin: auto;
+    text-align: center;
     color: var(--fontColor);
     font-family: helvetica;
-    text-align: center;
-
-}
-
-.day-theme {
-    --fontColor: var(--white);
-    background: url('https://images.unsplash.com/photo-1609096820610-6c3187c78942?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=879&q=80') no-repeat center center fixed;
+  }
+  .day-theme {
+    min-height: 100vh;
+    color: var(--white);
+    background: url('day.jpg') no-repeat center center fixed;
     background-size: cover;
     transition:all 1s ease;
-}
-.container{
-    background-color:rgba(0, 0, 0, 0.194); 
-    padding: 0;
 }
 .night-theme{
-    background: url('https://images.unsplash.com/photo-1509773896068-7fd415d91e2e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80') no-repeat center center fixed;
+    min-height: 100vh;
+    color: rgba(236, 235, 235, 0.703);
+    background: url('night.jpg') no-repeat center center fixed;
     background-size: cover;
-    --fontColor: rgba(236, 235, 235, 0.703);
     transition:all 1s ease;
 }
+.header-container{
+    width: 100%;
+    height:auto;
+    padding-bottom: 5px;
+    background-color:rgba(0, 0, 0, 0.194); 
 
+}
+label {
+    font-size: 2rem;
+}
 button {
     background-image: linear-gradient(92.88deg, #4157a0 9.16%,  #4f3b70 64.72%) ;
     border-radius: 10px;
@@ -38,7 +45,7 @@ button {
     cursor: pointer;
     font-size: 14px;
     height: 2rem;
-    width: 10 rem;
+    width: 10rem;
     padding: 0 1rem;
     
 }
@@ -47,7 +54,69 @@ button:hover {
     box-shadow: rgba(113, 105, 121, 0.279) 0 5px 20px;
     transition-duration: .3s;
 }
-
-label {
-    font-size: 2rem;
+h2{
+    font-size: 1.5rem;
 }
+.day-img-container{
+    width: 90%;
+    margin: auto;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.36);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1%;
+}
+img{
+    width: 30%;
+    height: 250px;
+    object-fit: cover;
+    flex: 1;
+    margin: 0 1%;
+}
+
+  @media only screen and (max-width: 700px) {
+    label {
+        font-size: 1.5rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+    button{
+        font-size: 10px;
+        height: 1.5rem;
+        width: 7rem;
+    }
+    h2{
+        font-size: 1rem;
+    }
+    img{
+        height:125px;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    label {
+        font-size: 1rem;
+    }
+    p{
+        font-size: 0.7rem;
+    }
+    button{
+        font-size: 8px;
+        height: 1.2rem;
+        width: 5rem;
+    }
+    h2{
+        font-size: 0.8rem;
+    }
+    .night-img-container{
+        flex-direction: column;
+        padding: .5% 1%;
+       
+    }
+    img{
+        width: 100%;
+        margin: 1% 0;
+    }
+  }
